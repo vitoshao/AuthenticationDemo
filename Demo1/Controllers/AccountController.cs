@@ -124,6 +124,10 @@ namespace Demo1.Controllers
             var user = _dbContext.Users
                     .FirstOrDefault(x => x.Id == id);
 
+            if (user == null) {
+                return NotFound();
+            }
+
             return View(user);
         }
 

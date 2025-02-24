@@ -156,13 +156,18 @@ namespace Demo2.Controllers
             var user = _dbContext.Users
                     .FirstOrDefault(x => x.Id == id);
 
+            if (user == null)
+            {
+                return NotFound();
+            }
+
             return View(user);
         }
 
         public IActionResult Logout()
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Index", "Home");
+            HttpContext.Session.Remove("JWToken");
+            return RedirectToAction("Login");
         }
     }
 }
