@@ -1,6 +1,6 @@
-using Demo2.Models.DTO;
+using Demo3.Models;
 
-namespace Demo2.Models
+namespace Demo3.Models
 {
     public class SignInResult
     {

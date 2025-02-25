@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Demo2.Models
+namespace Demo.DAL
 {
     public class TestDbInitialiser
     {

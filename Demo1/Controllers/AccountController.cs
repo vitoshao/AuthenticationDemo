@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Security.Claims;
+using Demo.DAL;
 using Demo1.AppCode;
 using Demo1.Models;
 using Demo1.Models.DTO;
@@ -88,7 +89,7 @@ namespace Demo1.Controllers
                 if (user.Password == password)
                 {
                     result.SignInStatus = EmSignInStatus.Success;
-                    result.User = new DtoLoginUser
+                    result.User = new LoginUserDto
                     {
                         Id = user.Id,
                         Account = user.Account,

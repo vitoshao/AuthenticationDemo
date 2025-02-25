@@ -1,7 +1,6 @@
-using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace Demo2.Models
+namespace Demo.DAL
 {
     public partial class TestDbContext : DbContext
     {

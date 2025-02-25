@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Demo2.Models
+namespace Demo.DAL
 {
     public partial class Users
     {

@@ -1,11 +1,10 @@
 using System.Diagnostics;
-using System.Security.Claims;
+using Demo.DAL;
 using Demo2.AppCode;
 using Demo2.Models;
 using Demo2.Models.DTO;
 using Demo2.Models.ViewModels;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -55,6 +54,7 @@ namespace Demo2.Controllers
                 var token = _tokenService.BuildToken(
                     _appSettings.JwtSettings.SignKey,
                     _appSettings.JwtSettings.Issuer,
+                    _appSettings.JwtSettings.Audience,
                     result.User);
 
                 if (token != null)
@@ -91,7 +91,7 @@ namespace Demo2.Controllers
                 if (user.Password == password)
                 {
                     result.SignInStatus = EmSignInStatus.Success;
-                    result.User = new DtoLoginUser
+                    result.User = new LoginUserDto
                     {
                         Id = user.Id,
                         Account = user.Account,

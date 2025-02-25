@@ -5,7 +5,7 @@ namespace Demo1.Models
     public class SignInResult
     {
         public EmSignInStatus SignInStatus { get; set; }
-        public DtoLoginUser? User { get; set; }
+        public LoginUserDto? User { get; set; }
         public string? Message { get; set; }
     }
 

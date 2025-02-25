@@ -1,6 +1,7 @@
-using Demo2.Models.DTO;
 
-namespace Demo2.AppCode
+using Demo3.Models;
+
+namespace Demo3.AppCode
 {
     public interface ITokenService
     {

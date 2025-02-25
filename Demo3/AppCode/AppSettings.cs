@@ -1,4 +1,4 @@
-namespace Demo2.AppCode
+namespace Demo3.AppCode
 {
     public class AppSettings
     {
@@ -11,7 +11,7 @@ namespace Demo2.AppCode
     public class JwtSettings
     {
         public string Issuer { get; set; } = null!;
-        public string Audience { get; set; } = null!;
+        public string Audience { get; set; } = null!;        
         public string SignKey { get; set; } = null!;
     }
 

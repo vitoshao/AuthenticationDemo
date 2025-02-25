@@ -7,12 +7,10 @@ namespace Demo1.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly TestDbContext _dbContext;
 
-    public HomeController(ILogger<HomeController> logger, TestDbContext dbContext)
+    public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        _dbContext = dbContext;
     }
 
     public IActionResult Index()

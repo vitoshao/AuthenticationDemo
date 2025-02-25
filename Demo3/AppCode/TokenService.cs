@@ -1,10 +1,10 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Demo2.Models.DTO;
+using Demo3.Models;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Demo2.AppCode
+namespace Demo3.AppCode
 {
     public class TokenService : ITokenService
     {
